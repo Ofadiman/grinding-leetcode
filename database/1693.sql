@@ -22,9 +22,11 @@ select *
 from daily_sales
 order by make_name desc, date_id desc;
 
+-- Solution
 select date_id, make_name, count(distinct lead_id) as unique_leads, count(distinct partner_id) as unique_partners
 from daily_sales
 group by date_id, make_name
 order by make_name desc, date_id desc;
+-- Solution
 
 drop table daily_sales;
