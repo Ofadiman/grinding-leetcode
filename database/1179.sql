@@ -61,6 +61,3 @@ from departments
 group by id
 order by id;
 -- Solution 2
-
-drop table departments;
-drop extension tablefunc;

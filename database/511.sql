@@ -13,9 +13,6 @@ values (1, 2, '2016-03-01', 5),
        (3, 1, '2016-03-02', 0),
        (3, 4, '2018-07-03', 5);
 
-select *
-from activities;
-
 -- Solution 1
 select player_id, min(event_date)
 from activities
@@ -34,5 +31,3 @@ select player_id, event_date as first_login
 from ranked_activities
 where position = 1;
 -- Solution 2
-
-drop table activities;

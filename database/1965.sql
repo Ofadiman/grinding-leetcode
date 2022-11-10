@@ -4,26 +4,21 @@ create table employees
     name        text
 );
 
+insert into employees (employee_id, name)
+values (2, 'Crew'),
+       (4, 'Haven'),
+       (5, 'Kristian');
+
 create table salaries
 (
     employee_id int not null,
     salary      int
 );
 
-insert into employees (employee_id, name)
-values (2, 'Crew'),
-       (4, 'Haven'),
-       (5, 'Kristian');
-
 insert into salaries (employee_id, salary)
 values (5, 76071),
        (1, 22517),
        (4, 63539);
-
-select *
-from employees;
-select *
-from salaries;
 
 -- Solution 1
 select coalesce(employees.employee_id, salaries.employee_id) as employee_id
@@ -48,6 +43,3 @@ where simulated_full_outer_join.salary is null
    or simulated_full_outer_join.name is null
 order by employee_id;
 -- Solution 2
-
-drop table employees;
-drop table salaries;

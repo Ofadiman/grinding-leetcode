@@ -15,14 +15,9 @@ values (1, 3, 5, '2019-08-01'),
        (3, 4, 4, '2019-07-21'),
        (3, 4, 4, '2019-07-21');
 
-select *
-from views;
-
--- Solution
+-- Solution 1
 select distinct(author_id)
 from views
 where author_id = viewer_id
 order by author_id;
--- Solution
-
-drop table views;
+-- Solution 1

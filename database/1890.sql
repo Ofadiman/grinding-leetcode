@@ -15,9 +15,6 @@ values (6, '2020-06-30 15:06:07'),
        (14, '2019-07-14 09:00:00'),
        (14, '2021-01-06 11:59:59');
 
-select *
-from users;
-
 -- Solution 1
 with filtered_users as (select *, row_number() over (partition by user_id order by last_login_at desc) row_number
                         from users
@@ -34,5 +31,3 @@ from users
 where extract(year from last_login_at) = 2020
 group by user_id;
 -- Solution 2
-
-drop table users;

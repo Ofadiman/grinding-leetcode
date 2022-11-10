@@ -18,15 +18,9 @@ values ('2020-12-8', 'toyota', 0, 1),
        ('2020-12-7', 'honda', 1, 2),
        ('2020-12-7', 'honda', 2, 1);
 
-select *
-from daily_sales
-order by make_name desc, date_id desc;
-
--- Solution
+-- Solution 1
 select date_id, make_name, count(distinct lead_id) as unique_leads, count(distinct partner_id) as unique_partners
 from daily_sales
 group by date_id, make_name
 order by make_name desc, date_id desc;
--- Solution
-
-drop table daily_sales;
+-- Solution 1

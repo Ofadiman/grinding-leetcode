@@ -21,8 +21,8 @@ insert into addresses (address_id, person_id, city, state)
 values (1, 2, 'New York City', 'New York'),
        (2, 3, 'Leetcode', 'California');
 
--- Solution
+-- Solution 1
 select first_name, last_name, city, state
 from people
          left join addresses using (person_id);
--- Solution
+-- Solution 1

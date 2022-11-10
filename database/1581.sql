@@ -5,7 +5,7 @@ create table visits
 );
 
 insert into visits (visit_id, customer_id)
-VALUES (1, 23),
+values (1, 23),
        (2, 9),
        (4, 30),
        (5, 54),
@@ -21,24 +21,16 @@ create table transactions
 );
 
 insert into transactions (transaction_id, visit_id, amount)
-VALUES (2, 5, 310),
+values (2, 5, 310),
        (3, 5, 300),
        (9, 5, 200),
        (12, 1, 910),
        (13, 2, 970);
 
-select *
-from visits;
-select *
-from transactions;
-
--- Solution
+-- Solution 1
 select customer_id, count(visit_id) as count_no_trans
 from visits
          left join transactions using (visit_id)
 where transaction_id is null
 group by customer_id;
--- Solution
-
-drop table visits;
-drop table transactions;
+-- Solution 1

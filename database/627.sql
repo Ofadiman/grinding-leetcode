@@ -7,17 +7,12 @@ create table salary
 );
 
 insert into salary (id, name, sex, salary)
-VALUES (1, 'A', 'm', 2500),
+values (1, 'A', 'm', 2500),
        (2, 'B', 'f', 1500),
        (3, 'C', 'm', 5500),
        (4, 'D', 'f', 500);
 
-select *
-from salary;
-
--- Solution
+-- Solution 1
 update salary
 set sex = case when sex = 'f' then 'm' else 'f' end;
--- Solution
-
-drop table salary;
+-- Solution 1

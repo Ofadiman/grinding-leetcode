@@ -13,14 +13,9 @@ values (1, 'Will', null),
        (5, 'Zack', 1),
        (6, 'Mark', 2);
 
-select *
-from customers;
-
--- Solution
+-- Solution 1
 select name
 from customers
 where referee_id != 2
    or referee_id is null;
--- Solution
-
-drop table customers;
+-- Solution 1

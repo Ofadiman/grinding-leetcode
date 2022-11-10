@@ -10,9 +10,9 @@ values (0, 1),
        (2, 0),
        (2, 1);
 
--- Solution
+-- Solution 1
 select user_id, count(*) as followers_count
 from followers
 group by user_id
 order by user_id;
--- Solution
+-- Solution 1

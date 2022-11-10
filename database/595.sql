@@ -14,14 +14,9 @@ values ('Afghanistan', 'Asia', 652230, 25500100, 20343000000),
        ('Andorra', 'Europe', 468, 78115, 3712000000),
        ('Angola', 'Africa', 1246700, 20609294, 100990000000);
 
-select *
-from countries;
-
--- Solution
+-- Solution 1
 select *
 from countries
 where area >= 3000000
    or population >= 25000000;
--- Solution
-
-drop table countries;
+-- Solution 1

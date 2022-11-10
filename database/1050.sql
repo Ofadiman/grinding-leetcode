@@ -14,9 +14,9 @@ values (1, 1, 1),
        (6, 2, 1),
        (7, 2, 1);
 
--- Solution
+-- Solution 1
 select actor_id, director_id
 from actors_directors
 group by actor_id, director_id
 having count(*) >= 3;
--- Solution
+-- Solution 1
