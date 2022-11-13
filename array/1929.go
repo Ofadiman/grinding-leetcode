@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func getConcatenation(nums []int) []int {
+func getConcatenation1(nums []int) []int {
 	slice := make([]int, len(nums)*2)
 
 	for i := 0; i < 2; i++ {
@@ -15,5 +15,5 @@ func getConcatenation(nums []int) []int {
 }
 
 func main() {
-	fmt.Println(getConcatenation([]int{1, 2, 3, 4}))
+	fmt.Println(getConcatenation1([]int{1, 2, 3, 4}))
 }

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func maximumWealth(accounts [][]int) int {
+func maximumWealth1(accounts [][]int) int {
 	highestWealth := 0
 	for i := 0; i < len(accounts); i++ {
 		sum := 0
@@ -19,5 +19,5 @@ func maximumWealth(accounts [][]int) int {
 }
 
 func main() {
-	fmt.Println(maximumWealth([][]int{{1, 2, 3}, {3, 2, 1}}))
+	fmt.Println(maximumWealth1([][]int{{1, 2, 3}, {3, 2, 1}}))
 }
