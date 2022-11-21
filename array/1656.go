@@ -8,7 +8,7 @@ type OrderedStream struct {
 	current int
 }
 
-func Constructor(n int) OrderedStream {
+func NewOrderedStream(n int) OrderedStream {
 	return OrderedStream{
 		length:  n,
 		chunks:  make([]string, n),
@@ -33,7 +33,7 @@ func (this *OrderedStream) Insert(idKey int, value string) []string {
 }
 
 func main() {
-	stream := Constructor(5)
+	stream := NewOrderedStream(5)
 	r1 := stream.Insert(3, "ccccc")
 	fmt.Println(r1)
 	r2 := stream.Insert(1, "aaaaa")
