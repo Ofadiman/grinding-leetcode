@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func mostWordsFound1(sentences []string) int {
+func mostWordsFound(sentences []string) int {
 	max := 0
 
 	for i := 0; i < len(sentences); i++ {
@@ -17,5 +17,5 @@ func mostWordsFound1(sentences []string) int {
 }
 
 func main() {
-	fmt.Println(mostWordsFound1([]string{"alice and bob love leetcode", "i think so too", "this is great thanks very much"}))
+	fmt.Println(mostWordsFound([]string{"alice and bob love leetcode", "i think so too", "this is great thanks very much"}))
 }

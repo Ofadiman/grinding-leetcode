@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func createTargetArray1(nums []int, index []int) []int {
+func createTargetArray(nums []int, index []int) []int {
 	result := make([]int, len(nums))
 
 	for idx, i := range index {
@@ -17,5 +17,5 @@ func createTargetArray1(nums []int, index []int) []int {
 }
 
 func main() {
-	fmt.Println(createTargetArray1([]int{0, 1, 2, 3, 4}, []int{0, 1, 2, 2, 1}))
+	fmt.Println(createTargetArray([]int{0, 1, 2, 3, 4}, []int{0, 1, 2, 2, 1}))
 }

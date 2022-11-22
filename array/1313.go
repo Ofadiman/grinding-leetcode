@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func decompressRLElist1(nums []int) []int {
+func decompressRLElist(nums []int) []int {
 	var result []int
 
 	for i := 0; i < len(nums); i += 2 {
@@ -17,5 +17,5 @@ func decompressRLElist1(nums []int) []int {
 }
 
 func main() {
-	fmt.Println(decompressRLElist1([]int{1, 2, 3, 4}))
+	fmt.Println(decompressRLElist([]int{1, 2, 3, 4}))
 }

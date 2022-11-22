@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func smallerNumbersThanCurrent1(nums []int) []int {
+func smallerNumbersThanCurrent(nums []int) []int {
 	sortedNums := make([]int, len(nums))
 	copy(sortedNums, nums)
 	sort.Ints(sortedNums)
@@ -19,5 +19,5 @@ func smallerNumbersThanCurrent1(nums []int) []int {
 }
 
 func main() {
-	fmt.Println(smallerNumbersThanCurrent1([]int{8, 1, 2, 2, 3}))
+	fmt.Println(smallerNumbersThanCurrent([]int{8, 1, 2, 2, 3}))
 }

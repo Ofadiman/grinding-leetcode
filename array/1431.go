@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func kidsWithCandies1(candies []int, extraCandies int) []bool {
+func kidsWithCandies(candies []int, extraCandies int) []bool {
 	highestCandyCount := 0
 	for i := 0; i < len(candies); i++ {
 		highestCandyCount = int(math.Max(float64(candies[i]), float64(highestCandyCount)))
@@ -24,5 +24,5 @@ func kidsWithCandies1(candies []int, extraCandies int) []bool {
 }
 
 func main() {
-	fmt.Println(kidsWithCandies1([]int{2, 3, 5, 1, 3}, 3))
+	fmt.Println(kidsWithCandies([]int{2, 3, 5, 1, 3}, 3))
 }

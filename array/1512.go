@@ -2,20 +2,7 @@ package main
 
 import "fmt"
 
-func numIdenticalPairs1(nums []int) int {
-	counter := 0
-	for i := 0; i < len(nums); i++ {
-		for j := 0; j < len(nums); j++ {
-			if nums[i] == nums[j] && i < j {
-				counter++
-			}
-		}
-	}
-
-	return counter
-}
-
-func numIdenticalPairs2(nums []int) int {
+func numIdenticalPairs(nums []int) int {
 	counter := 0
 	elements := make(map[int]int)
 
@@ -33,5 +20,5 @@ func numIdenticalPairs2(nums []int) int {
 }
 
 func main() {
-	fmt.Println(numIdenticalPairs2([]int{1, 2, 3, 1, 1, 3}))
+	fmt.Println(numIdenticalPairs([]int{1, 2, 3, 1, 1, 3}))
 }

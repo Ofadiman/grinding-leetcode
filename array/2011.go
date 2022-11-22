@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func finalValueAfterOperations1(operations []string) int {
+func finalValueAfterOperations(operations []string) int {
 	result := 0
 
 	for i := 0; i < len(operations); i++ {
@@ -24,5 +24,5 @@ func finalValueAfterOperations1(operations []string) int {
 }
 
 func main() {
-	fmt.Println(finalValueAfterOperations1([]string{"--X", "X++", "X++"}))
+	fmt.Println(finalValueAfterOperations([]string{"--X", "X++", "X++"}))
 }

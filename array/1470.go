@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func shuffle1(numbers []int, partitionSize int) []int {
+func shuffle(numbers []int, partitionSize int) []int {
 	shuffled := make([]int, 0)
 
 	for i := 0; i < partitionSize; i++ {
@@ -13,5 +13,5 @@ func shuffle1(numbers []int, partitionSize int) []int {
 }
 
 func main() {
-	fmt.Println(shuffle1([]int{2, 5, 1, 3, 4, 7}, 3))
+	fmt.Println(shuffle([]int{2, 5, 1, 3, 4, 7}, 3))
 }
