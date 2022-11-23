@@ -42,7 +42,7 @@ values (1, 'Samsung'),
        (3, 'LG'),
        (4, 'HP');
 
--- Solution 1
+-- Solution
 with cte as (select buyer_id, count(*) as orders_in_2019
              from orders
              where extract(year from order_date) = 2019
@@ -50,4 +50,4 @@ with cte as (select buyer_id, count(*) as orders_in_2019
 select user_id as buyer_id, join_date, coalesce(orders_in_2019, 0) as orders_in_2019
 from users
          left join cte on cte.buyer_id = users.user_id;
--- Solution 1
+-- Solution

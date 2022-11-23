@@ -13,8 +13,6 @@ values (1, 'Alice'),
        (13, 'Jonathan'),
        (19, 'Elvis');
 
-
-
 create table rides
 (
     id       int,
@@ -33,17 +31,10 @@ values (1, 1, 120),
        (8, 19, 400),
        (9, 7, 230);
 
--- Solution 1
+-- Solution
 select users.name, coalesce(sum(rides.distance), 0) as travelled_distance
 from users
          left join rides on users.id = rides.user_id
 group by users.name, users.id
 order by travelled_distance desc, name;
--- Solution 1
-
--- Solution 2
-select distinct name, coalesce(sum(rides.distance) over (partition by users.id), 0) as travelled_distance
-from users
-         left join rides on users.id = rides.user_id
-order by travelled_distance desc, name;
--- Solution 2
+-- Solution

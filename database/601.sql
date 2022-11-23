@@ -15,13 +15,15 @@ values (1, '2017-01-01', 10),
        (7, '2017-01-07', 199),
        (8, '2017-01-09', 188);
 
--- Solution 1
-with t1 as (select *,
-                   row_number() over (order by id)      as row_number,
-                   id - row_number() over (order by id) as group_identifier
-            from stadiums
-            where people >= 100),
-     t2 as (select *, count(group_identifier) over (partition by group_identifier) as partition_records_count from t1)
+-- Solution
+with cte1 as (select *,
+                     row_number() over (order by id)      as row_number,
+                     id - row_number() over (order by id) as group_identifier
+              from stadiums
+              where people >= 100),
+     cte2 as (select *, count(group_identifier) over (partition by group_identifier) as partition_records_count
+              from cte1)
 select *
-from t2 where partition_records_count >= 3;
--- Solution 1
+from cte2
+where partition_records_count >= 3;
+-- Solution

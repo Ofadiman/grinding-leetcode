@@ -12,25 +12,11 @@ values (1, 'Daniel', 'YFEV COUGH'),
        (4, 'George', 'ACNE DIAB100'),
        (5, 'Alain', 'DIAB201');
 
--- Solution 1
+-- Solution
 with cte as (select patient_id, patient_name, unnest(coalesce(string_to_array(conditions, ' '), '{}')) as condition
              from patients)
 select cte.patient_id, cte.patient_name
 from cte
 where cte.condition like 'DIAB1%'
 group by cte.patient_id, cte.patient_name;
--- Solution 1
-
--- Solution 2
-select *
-from patients
-where patients.conditions ~ ' DIAB1.*'
-   or patients.conditions ~ 'DIAB1.*';
--- Solution 2
-
--- Solution 3
-select *
-from patients
-where patients.conditions like '% DIAB1%'
-   or patients.conditions like 'DIAB1%';
--- Solution 3
+-- Solution

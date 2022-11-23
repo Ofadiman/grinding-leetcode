@@ -1,6 +1,6 @@
 create table users
 (
-    user_id       int not null,
+    user_id       int,
     last_login_at timestamp with time zone
 );
 
@@ -15,19 +15,11 @@ values (6, '2020-06-30 15:06:07'),
        (14, '2019-07-14 09:00:00'),
        (14, '2021-01-06 11:59:59');
 
--- Solution 1
-with filtered_users as (select *, row_number() over (partition by user_id order by last_login_at desc) row_number
-                        from users
-                        where tstzrange('2020-01-01'::timestamptz, '2021-01-01'::timestamptz, '[)') @> last_login_at)
+-- Solution
+with cte as (select *, row_number() over (partition by user_id order by last_login_at desc) row_number
+             from users
+             where tstzrange('2020-01-01'::timestamptz, '2021-01-01'::timestamptz, '[)') @> last_login_at)
 select *
-from filtered_users
+from cte
 where row_number = 1;
--- Solution 1
-
--- Solution 2
-select user_id,
-       max(last_login_at)
-from users
-where extract(year from last_login_at) = 2020
-group by user_id;
--- Solution 2
+-- Solution

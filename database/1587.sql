@@ -1,7 +1,7 @@
 create table accounts
 (
-    account_id int  not null,
-    name       text not null
+    account_id int,
+    name       text
 );
 
 insert into accounts (account_id, name)
@@ -11,10 +11,10 @@ values (900001, 'Alice'),
 
 create table transactions
 (
-    transaction_id int  not null,
-    account_id     int  not null,
-    amount         int  not null,
-    transacted_on  date not null
+    transaction_id int,
+    account_id     int,
+    amount         int,
+    transacted_on  date
 );
 
 insert into transactions (transaction_id, account_id, amount, transacted_on)
@@ -26,10 +26,10 @@ values (1, 900001, 7000, '2020-08-01'),
        (6, 900003, 6000, '2020-09-07'),
        (7, 900003, -4000, '2020-09-11');
 
--- Solution 1
+-- Solution
 select name, sum(amount) as balance
 from accounts
          inner join transactions using (account_id)
 group by name
 having sum(amount) > 10000;
--- Solution 1
+-- Solution

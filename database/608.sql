@@ -11,7 +11,7 @@ values (1, null),
        (4, 2),
        (5, 2);
 
--- Solution 1
+-- Solution
 select distinct tree1.id,
                 case
                     when tree1.parent_id is null then 'Root'
@@ -22,4 +22,4 @@ select distinct tree1.id,
 from tree as tree1
          left join tree as tree2 on tree1.id = tree2.parent_id
 order by tree1.id;
--- Solution 1
+-- Solution

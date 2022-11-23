@@ -13,7 +13,7 @@ values (1, '2015-01-01', 10),
        (5, '2015-01-06', 35),
        (6, '2015-01-08', 30);
 
--- Solution 1
+-- Solution
 with cte as (select weather.*,
                     lag(temperature) over (order by weather.record_date) as previous_temperature,
                     lag(record_date) over (order by weather.record_date) as previous_date
@@ -22,12 +22,4 @@ select *
 from cte
 where cte.record_date - cte.previous_date = 1
   and cte.temperature > cte.previous_temperature;
--- Solution 1
-
--- Solution 2
-select *
-from weather weather1,
-     weather weather2
-where weather1.temperature > weather2.temperature
-  and weather1.record_date - weather2.record_date = 1;
--- Solution 2
+-- Solution

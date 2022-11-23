@@ -12,7 +12,7 @@ values (1, 3.50),
        (5, 4.00),
        (6, 3.65);
 
--- Solution 1
+-- Solution
 select score, dense_rank() over (order by score desc) as rank
 from scores;
--- Solution 1
+-- Solution

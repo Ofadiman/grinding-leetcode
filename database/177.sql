@@ -9,7 +9,7 @@ values (1, 100),
        (2, 200),
        (3, 300);
 
--- Solution 1
+-- Solution
 create function get_nth_highest_value(table_name regclass, column_name text, n integer)
     returns int
     language plpgsql
@@ -29,4 +29,4 @@ end;
 $$;
 
 select get_nth_highest_value('employees', 'salary', 2);
--- Solution 1
+-- Solution

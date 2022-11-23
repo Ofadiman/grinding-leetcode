@@ -20,15 +20,9 @@ insert into orders (id, customer_id)
 values (1, 3),
        (2, 1);
 
--- Solution 1
+-- Solution
 select name
 from customers
          left join orders on customers.id = orders.customer_id
 where orders.id is null;
--- Solution 1
-
--- Solution 2
-select name
-from customers
-where customers.id not in (select customer_id from orders);
--- Solution 2
+-- Solution

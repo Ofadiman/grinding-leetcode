@@ -15,9 +15,9 @@ values ('A', 'Math'),
        ('H', 'Math'),
        ('I', 'Math');
 
--- Solution 1
+-- Solution
 select class
 from courses
 group by class
 having count(student) >= 5;
--- Solution 1
+-- Solution

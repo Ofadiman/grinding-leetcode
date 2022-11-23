@@ -37,17 +37,17 @@ values (1, 'No', 'client'),
        (12, 'No', 'driver'),
        (13, 'No', 'driver');
 
--- Solution 1
-with t1 as (select *,
-                   count(request_at) over (partition by request_at)                                as total_rides,
-                   count(case when status = 'completed' then 1 end) over (partition by request_at) as completed_rides
-            from trips
-                     inner join users as clients on (clients.users_id = trips.client_id and clients.role = 'client')
-                     inner join users as drivers on (drivers.users_id = trips.driver_id and drivers.role = 'driver')
-            where clients.banned = 'No'
-              and drivers.banned = 'No')
-select distinct t1.request_at,
-                trunc((t1.total_rides::numeric - t1.completed_rides::numeric) / t1.total_rides::numeric,
+-- Solution
+with cte as (select *,
+                    count(request_at) over (partition by request_at)                                as total_rides,
+                    count(case when status = 'completed' then 1 end) over (partition by request_at) as completed_rides
+             from trips
+                      inner join users as clients on (clients.users_id = trips.client_id and clients.role = 'client')
+                      inner join users as drivers on (drivers.users_id = trips.driver_id and drivers.role = 'driver')
+             where clients.banned = 'No'
+               and drivers.banned = 'No')
+select distinct cte.request_at,
+                trunc((cte.total_rides::numeric - cte.completed_rides::numeric) / cte.total_rides::numeric,
                       2) as cancellation_rate
-from t1;
--- Solution 1
+from cte;
+-- Solution

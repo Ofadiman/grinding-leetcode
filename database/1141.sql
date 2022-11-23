@@ -19,9 +19,9 @@ values (1, 1, '2019-07-20', 'open_session'),
        (4, 3, '2019-06-25', 'open_session'),
        (4, 3, '2019-06-25', 'end_session');
 
--- Solution 1
+-- Solution
 select activity_date, count(distinct user_id)
 from activities
 where activity_date between date('2019-07-27') - interval '30 days' and date('2019-07-27')
 group by activity_date;
--- Solution 1
+-- Solution

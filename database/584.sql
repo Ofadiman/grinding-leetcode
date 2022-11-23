@@ -1,7 +1,7 @@
 create table customers
 (
-    id         int  not null,
-    name       text not null,
+    id         int,
+    name       text,
     referee_id int
 );
 
@@ -13,9 +13,9 @@ values (1, 'Will', null),
        (5, 'Zack', 1),
        (6, 'Mark', 2);
 
--- Solution 1
+-- Solution
 select name
 from customers
 where referee_id != 2
    or referee_id is null;
--- Solution 1
+-- Solution

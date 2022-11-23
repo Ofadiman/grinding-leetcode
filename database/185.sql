@@ -25,18 +25,14 @@ insert into departments (id, name)
 values (1, 'IT'),
        (2, 'Sales');
 
--- Solution 1
-with t1 as (select departments.name                                                    as department,
-                   employees.name                                                      as employee,
-                   employees.salary                                                    as salary,
-                   dense_rank() over (partition by department_id order by salary desc) as ranked
-            from employees
-                     inner join departments on departments.id = employees.department_id)
+-- Solution
+with cte as (select departments.name                                                    as department,
+                    employees.name                                                      as employee,
+                    employees.salary                                                    as salary,
+                    dense_rank() over (partition by department_id order by salary desc) as ranked
+             from employees
+                      inner join departments on departments.id = employees.department_id)
 select department, employee, salary
-from t1
-where t1.ranked <= 3;
--- Solution 1
-
-select *, dense_rank() over (partition by department_id order by salary desc) as ranked
-from employees
-         inner join departments on departments.id = employees.department_id
+from cte
+where cte.ranked <= 3;
+-- Solution

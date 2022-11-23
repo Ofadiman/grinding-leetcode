@@ -1,10 +1,10 @@
 create table countries
 (
-    name       text not null,
-    continent  text not null,
-    area       bigint  not null,
-    population bigint  not null,
-    gdp        bigint  not null
+    name       text,
+    continent  text,
+    area       bigint,
+    population bigint,
+    gdp        bigint
 );
 
 insert into countries (name, continent, area, population, gdp)
@@ -14,9 +14,9 @@ values ('Afghanistan', 'Asia', 652230, 25500100, 20343000000),
        ('Andorra', 'Europe', 468, 78115, 3712000000),
        ('Angola', 'Africa', 1246700, 20609294, 100990000000);
 
--- Solution 1
+-- Solution
 select *
 from countries
 where area >= 3000000
    or population >= 25000000;
--- Solution 1
+-- Solution
