@@ -11,7 +11,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func PrintLinkedList(head *ListNode) {
+func Print(head *ListNode) {
 	var nodes []*ListNode
 	current := head
 
@@ -31,4 +31,18 @@ func PrintLinkedList(head *ListNode) {
 	}
 
 	fmt.Println(strings.Join(formattedNodes, " => "))
+}
+
+func NewFromSlice(slice []int) *ListNode {
+	var head *ListNode
+
+	for _, value := range slice {
+		temp := &ListNode{
+			Val:  value,
+			Next: head,
+		}
+		head = temp
+	}
+
+	return head
 }
