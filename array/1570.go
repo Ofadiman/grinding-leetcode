@@ -6,7 +6,7 @@ type SparseVector struct {
 	nums []int
 }
 
-func Constructor(nums []int) SparseVector {
+func Constructor1570(nums []int) SparseVector {
 	return SparseVector{
 		nums: nums,
 	}
@@ -23,7 +23,7 @@ func (r *SparseVector) dotProduct(vec SparseVector) int {
 }
 
 func main() {
-	v1 := Constructor([]int{1, 0, 0, 2, 3})
-	v2 := Constructor([]int{0, 3, 0, 4, 0})
+	v1 := Constructor1570([]int{1, 0, 0, 2, 3})
+	v2 := Constructor1570([]int{0, 3, 0, 4, 0})
 	fmt.Println(v1.dotProduct(v2))
 }
