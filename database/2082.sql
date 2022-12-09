@@ -1,0 +1,23 @@
+create table if not exists store
+(
+    bill_id     int,
+    customer_id int,
+    amount      int
+);
+truncate table store;
+insert into store (bill_id, customer_id, amount)
+values ('6', '1', '549');
+insert into store (bill_id, customer_id, amount)
+values ('8', '1', '834');
+insert into store (bill_id, customer_id, amount)
+values ('4', '2', '394');
+insert into store (bill_id, customer_id, amount)
+values ('11', '3', '657');
+insert into store (bill_id, customer_id, amount)
+values ('13', '3', '257');
+
+-- Solution
+select count(distinct customer_id) as rich_count
+from store
+where amount > 500;
+-- Solution
