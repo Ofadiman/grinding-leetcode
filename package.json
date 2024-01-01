@@ -4,6 +4,9 @@
   "description": "Repository contains solutions to leetcode tasks.",
   "author": "Ofadiman",
   "license": "MIT",
+  "scripts": {
+    "format": "prettier --write ."
+  },
   "volta": {
     "node": "20.10.0",
     "pnpm": "8.13.1"
