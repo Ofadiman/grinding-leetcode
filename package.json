@@ -1,7 +1,16 @@
 {
   "name": "grinding-leetcode",
   "version": "1.0.0",
-  "description": "The repository contains solutions to leetcode tasks.",
+  "description": "Repository contains solutions to leetcode tasks.",
   "author": "Ofadiman",
-  "license": "MIT"
+  "license": "MIT",
+  "volta": {
+    "node": "20.10.0",
+    "pnpm": "8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.1"
+  }
 }

@@ -1,3 +1,3 @@
 # Grinding leetcode
 
-The repository contains solutions for popular tasks available on [leetcode](https://leetcode.com/).
+Repository contains solutions for popular programming problems available on [leetcode](https://leetcode.com/).
