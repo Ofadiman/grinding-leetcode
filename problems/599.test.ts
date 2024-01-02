@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { expect, test } from 'vitest'
 
 function find(firstList: string[], secondList: string[]): string[] {
   if (firstList.length === 0 || secondList.length === 0) {
@@ -56,30 +56,28 @@ function find(firstList: string[], secondList: string[]): string[] {
   return answer
 }
 
-describe('599', () => {
-  test('should handle 2 empty lists', () => {
-    expect(find([], [])).toEqual([])
-  })
+test('should handle 2 empty lists', () => {
+  expect(find([], [])).toEqual([])
+})
 
-  test('should handle 1 empty list', () => {
-    expect(find(['one', 'two'], [])).toEqual([])
-    expect(find([], ['one', 'two'])).toEqual([])
-  })
+test('should handle 1 empty list', () => {
+  expect(find(['one', 'two'], [])).toEqual([])
+  expect(find([], ['one', 'two'])).toEqual([])
+})
 
-  test('should handle lists with different lenghts', () => {
-    expect(find(['one', 'two', 'three', 'four'], ['two', 'six', 'one'])).toEqual(['two'])
-    expect(find(['one', 'two', 'three'], ['two', 'six', 'one', 'four'])).toEqual(['two'])
-  })
+test('should handle lists with different lenghts', () => {
+  expect(find(['one', 'two', 'three', 'four'], ['two', 'six', 'one'])).toEqual(['two'])
+  expect(find(['one', 'two', 'three'], ['two', 'six', 'one', 'four'])).toEqual(['two'])
+})
 
-  test('should handle lists with no overlapping strings', () => {
-    expect(find(['one', 'two'], ['three', 'four'])).toEqual([])
-  })
+test('should handle lists with no overlapping strings', () => {
+  expect(find(['one', 'two'], ['three', 'four'])).toEqual([])
+})
 
-  test('should return a string that occurs in both lists and the sum of their indexes is the lowest', () => {
-    expect(find(['one', 'two', 'three'], ['two', 'six', 'one'])).toEqual(['two'])
-  })
+test('should return a string that occurs in both lists and the sum of their indexes is the lowest', () => {
+  expect(find(['one', 'two', 'three'], ['two', 'six', 'one'])).toEqual(['two'])
+})
 
-  test('should return 2 strings if sums of their indexes are equal', () => {
-    expect(find(['one', 'two', 'three'], ['two', 'one', 'six'])).toEqual(['one', 'two'])
-  })
+test('should return 2 strings if sums of their indexes are equal', () => {
+  expect(find(['one', 'two', 'three'], ['two', 'one', 'six'])).toEqual(['one', 'two'])
 })

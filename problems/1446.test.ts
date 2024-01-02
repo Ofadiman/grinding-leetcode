@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { expect, test } from 'vitest'
 
 function maxPower(s: string): number {
   let max = 0
@@ -24,16 +24,14 @@ function maxPower(s: string): number {
   return max
 }
 
-describe('1446', () => {
-  test('should return 0 when string is empty', () => {
-    expect(maxPower('')).toEqual(0)
-  })
+test('should return 0 when string is empty', () => {
+  expect(maxPower('')).toEqual(0)
+})
 
-  test('should return string.length if string has only 1 distinct letter', () => {
-    expect(maxPower('aaa')).toEqual(3)
-  })
+test('should return string.length if string has only 1 distinct letter', () => {
+  expect(maxPower('aaa')).toEqual(3)
+})
 
-  test('should return correct number if string has multiple letters', () => {
-    expect(maxPower('leetcode')).toEqual(2)
-  })
+test('should return correct number if string has multiple letters', () => {
+  expect(maxPower('leetcode')).toEqual(2)
 })
