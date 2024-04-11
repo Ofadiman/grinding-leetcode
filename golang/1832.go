@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func checkIfPangram(sentence string) bool {
 	table := make(map[int32]int32)
 
@@ -20,8 +18,4 @@ func checkIfPangram(sentence string) bool {
 	}
 
 	return true
-}
-
-func main() {
-	fmt.Println(checkIfPangram("thequickbrownfoxjumpsoverthelazydog"))
 }

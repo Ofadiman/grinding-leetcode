@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -27,8 +26,4 @@ func minProductSum(nums1 []int, nums2 []int) int {
 		sum += nums1[i] * nums2[order[len(nums1)-1-i]]
 	}
 	return sum
-}
-
-func main() {
-	fmt.Println(minProductSum([]int{5, 3, 4, 2}, []int{4, 2, 2, 5}))
 }

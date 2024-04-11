@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func numIdenticalPairs(nums []int) int {
 	counter := 0
 	elements := make(map[int]int)
@@ -17,8 +15,4 @@ func numIdenticalPairs(nums []int) int {
 	}
 
 	return counter
-}
-
-func main() {
-	fmt.Println(numIdenticalPairs([]int{1, 2, 3, 1, 1, 3}))
 }

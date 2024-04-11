@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -14,8 +13,4 @@ func numJewelsInStones(jewels string, stones string) int {
 	}
 
 	return counter
-}
-
-func main() {
-	fmt.Println(numJewelsInStones("aA", "aAAbbbb"))
 }

@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func originalDigits(s string) string {
 	nums := make([]int, 10)
 
@@ -55,8 +53,4 @@ func originalDigits(s string) string {
 	}
 
 	return string(res)
-}
-
-func main() {
-	fmt.Println(originalDigits("zerozero"))
 }

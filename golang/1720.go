@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func decode(encoded []int, first int) []int {
 	result := make([]int, len(encoded)+1)
 	result[0] = first
@@ -12,8 +10,4 @@ func decode(encoded []int, first int) []int {
 	}
 
 	return result
-}
-
-func main() {
-	fmt.Println(decode([]int{1, 2, 3}, 1))
 }

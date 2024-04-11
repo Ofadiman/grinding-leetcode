@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func shuffle(numbers []int, partitionSize int) []int {
 	shuffled := make([]int, 0)
 
@@ -10,8 +8,4 @@ func shuffle(numbers []int, partitionSize int) []int {
 	}
 
 	return shuffled
-}
-
-func main() {
-	fmt.Println(shuffle([]int{2, 5, 1, 3, 4, 7}, 3))
 }

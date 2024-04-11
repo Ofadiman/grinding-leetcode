@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -15,8 +14,4 @@ func maxSubArray(nums []int) int {
 	}
 
 	return final
-}
-
-func main() {
-	fmt.Println(maxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
 }

@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func createTargetArray(nums []int, index []int) []int {
 	result := make([]int, len(nums))
 
@@ -14,8 +12,4 @@ func createTargetArray(nums []int, index []int) []int {
 	}
 
 	return result
-}
-
-func main() {
-	fmt.Println(createTargetArray([]int{0, 1, 2, 3, 4}, []int{0, 1, 2, 2, 1}))
 }

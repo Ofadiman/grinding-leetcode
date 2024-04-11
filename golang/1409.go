@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func createSlice(n int) []int {
 	var slice []int
 	for i := 1; i <= n; i++ {
@@ -41,8 +39,4 @@ func processQueries(queries []int, m int) []int {
 	}
 
 	return answer
-}
-
-func main() {
-	fmt.Println(processQueries([]int{3, 1, 2, 1}, 5))
 }

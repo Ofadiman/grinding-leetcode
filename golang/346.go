@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -27,12 +26,4 @@ func (r *MovingAverage) Next(val int) float64 {
 	}
 
 	return sum / math.Min(r.size, float64(len(r.items)))
-}
-
-func main() {
-	movingAverage := Constructor346(3)
-	fmt.Println(movingAverage.Next(1))
-	fmt.Println(movingAverage.Next(10))
-	fmt.Println(movingAverage.Next(3))
-	fmt.Println(movingAverage.Next(5))
 }

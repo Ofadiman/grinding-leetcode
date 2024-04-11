@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 )
 
 func decodeMessage(key string, message string) string {
@@ -19,8 +18,4 @@ func decodeMessage(key string, message string) string {
 	}
 
 	return buffer.String()
-}
-
-func main() {
-	fmt.Println(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"))
 }

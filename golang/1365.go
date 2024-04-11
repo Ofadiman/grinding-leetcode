@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -16,8 +15,4 @@ func smallerNumbersThanCurrent(nums []int) []int {
 		})
 	}
 	return counts
-}
-
-func main() {
-	fmt.Println(smallerNumbersThanCurrent([]int{8, 1, 2, 2, 3}))
 }

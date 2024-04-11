@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -34,8 +33,4 @@ func findLatestStep(arr []int, m int) int {
 	}
 
 	return answer + 1
-}
-
-func main() {
-	fmt.Println(findLatestStep([]int{3, 5, 1, 2, 4}, 1))
 }

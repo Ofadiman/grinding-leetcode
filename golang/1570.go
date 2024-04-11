@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type SparseVector struct {
 	nums []int
 }
@@ -20,10 +18,4 @@ func (r *SparseVector) dotProduct(vec SparseVector) int {
 	}
 
 	return sum
-}
-
-func main() {
-	v1 := Constructor1570([]int{1, 0, 0, 2, 3})
-	v2 := Constructor1570([]int{0, 3, 0, 4, 0})
-	fmt.Println(v1.dotProduct(v2))
 }

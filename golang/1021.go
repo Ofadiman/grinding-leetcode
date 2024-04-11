@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -24,8 +23,4 @@ func removeOuterParentheses(s string) string {
 	}
 
 	return strings.Join(slice, "")
-}
-
-func main() {
-	fmt.Println(removeOuterParentheses("(()())(())"))
 }

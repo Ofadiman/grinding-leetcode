@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func finalPrices(prices []int) []int {
 	slice := make([]int, len(prices))
 	var stack []int
@@ -20,8 +18,4 @@ func finalPrices(prices []int) []int {
 		}
 	}
 	return slice
-}
-
-func main() {
-	fmt.Println(finalPrices([]int{8, 4, 6, 2, 3}))
 }

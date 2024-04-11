@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func arithmeticTriplets(nums []int, diff int) int {
 	table := make(map[int]int)
 	count := 0
@@ -16,12 +14,7 @@ func arithmeticTriplets(nums []int, diff int) int {
 				count++
 			}
 		}
-
 	}
 
 	return count
-}
-
-func main() {
-	fmt.Println(arithmeticTriplets([]int{0, 1, 4, 6, 7, 10}, 3))
 }

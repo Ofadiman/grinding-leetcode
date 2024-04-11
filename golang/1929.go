@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func getConcatenation(nums []int) []int {
 	slice := make([]int, len(nums)*2)
 
@@ -12,8 +10,4 @@ func getConcatenation(nums []int) []int {
 	}
 
 	return slice
-}
-
-func main() {
-	fmt.Println(getConcatenation([]int{1, 2, 3, 4}))
 }

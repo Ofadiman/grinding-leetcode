@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -21,8 +20,4 @@ func kidsWithCandies(candies []int, extraCandies int) []bool {
 	}
 
 	return result
-}
-
-func main() {
-	fmt.Println(kidsWithCandies([]int{2, 3, 5, 1, 3}, 3))
 }

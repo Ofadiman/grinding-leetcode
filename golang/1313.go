@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func decompressRLElist(nums []int) []int {
 	var result []int
 
@@ -14,8 +12,4 @@ func decompressRLElist(nums []int) []int {
 	}
 
 	return result
-}
-
-func main() {
-	fmt.Println(decompressRLElist([]int{1, 2, 3, 4}))
 }

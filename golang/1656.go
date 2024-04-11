@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type OrderedStream struct {
 	length  int
 	chunks  []string
@@ -30,18 +28,4 @@ func (this *OrderedStream) Insert(idKey int, value string) []string {
 	}
 
 	return this.chunks[idKey-1 : this.current]
-}
-
-func main() {
-	stream := NewOrderedStream(5)
-	r1 := stream.Insert(3, "ccccc")
-	fmt.Println(r1)
-	r2 := stream.Insert(1, "aaaaa")
-	fmt.Println(r2)
-	r3 := stream.Insert(2, "bbbbb")
-	fmt.Println(r3)
-	r4 := stream.Insert(5, "eeeee")
-	fmt.Println(r4)
-	r5 := stream.Insert(4, "ddddd")
-	fmt.Println(r5)
 }

@@ -67,11 +67,3 @@ func (this *ParkingSystem) AddCar(carType int) bool {
 		}
 	}
 }
-
-func main() {
-	parkingSystem := NewParkingSystem(1, 1, 0)
-	fmt.Println(parkingSystem.AddCar(1))
-	fmt.Println(parkingSystem.AddCar(2))
-	fmt.Println(parkingSystem.AddCar(3))
-	fmt.Println(parkingSystem.AddCar(1))
-}

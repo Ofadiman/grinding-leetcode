@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -21,8 +20,4 @@ func maxDepth(s string) int {
 	}
 
 	return max
-}
-
-func main() {
-	fmt.Println(maxDepth("(1+(2*3)+((8)/4))+1"))
 }

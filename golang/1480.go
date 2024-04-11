@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func runningSum(nums []int) []int {
 	currentSum := 0
 	runningSumSlice := make([]int, len(nums))
@@ -11,8 +9,4 @@ func runningSum(nums []int) []int {
 	}
 
 	return runningSumSlice
-}
-
-func main() {
-	fmt.Println(runningSum([]int{1, 2, 3, 4}))
 }

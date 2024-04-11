@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -52,8 +51,4 @@ func uniqueMorseRepresentations(words []string) int {
 	}
 
 	return len(table)
-}
-
-func main() {
-	fmt.Println(uniqueMorseRepresentations([]string{"gin", "zen", "gig", "msg"}))
 }

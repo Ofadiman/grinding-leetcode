@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func numberOfEmployeesWhoMetTarget(hours []int, target int) int {
 	answer := 0
 
@@ -12,8 +10,4 @@ func numberOfEmployeesWhoMetTarget(hours []int, target int) int {
 	}
 
 	return answer
-}
-
-func main() {
-	fmt.Println(numberOfEmployeesWhoMetTarget([]int{0, 1, 2, 3, 4}, 2))
 }

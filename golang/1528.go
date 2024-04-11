@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -13,8 +12,4 @@ func restoreString(s string, indices []int) string {
 	}
 
 	return strings.Join(reordered, "")
-}
-
-func main() {
-	fmt.Println(restoreString("codeleet", []int{4, 5, 6, 7, 0, 2, 1, 3}))
 }

@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func finalValueAfterOperations(operations []string) int {
 	result := 0
 
@@ -21,8 +19,4 @@ func finalValueAfterOperations(operations []string) int {
 	}
 
 	return result
-}
-
-func main() {
-	fmt.Println(finalValueAfterOperations([]string{"--X", "X++", "X++"}))
 }

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"strings"
 )
@@ -14,8 +13,4 @@ func mostWordsFound(sentences []string) int {
 	}
 
 	return max
-}
-
-func main() {
-	fmt.Println(mostWordsFound([]string{"alice and bob love leetcode", "i think so too", "this is great thanks very much"}))
 }
